@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { CheckboxProps } from "@radix-ui/react-checkbox";
 
-export interface ICheckbox {
+export interface ICheckbox extends CheckboxProps{
 }

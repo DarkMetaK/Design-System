@@ -3,7 +3,7 @@ import { clsx } from 'clsx'
 
 import { IHeading } from "./types";
 
-export function Heading({ size = 'md', children, asChild }: IHeading) {
+export function Heading({ size = 'md', children, asChild, classname }: IHeading) {
 
   const Tag = asChild ? Slot : 'h2'
 
@@ -15,7 +15,8 @@ export function Heading({ size = 'md', children, asChild }: IHeading) {
           'text-lg': size === 'sm',
           'text-xl': size === 'md',
           'text-2xl': size === 'lg',
-        }
+        },
+        classname
         )}>
         {children}
     </Tag>

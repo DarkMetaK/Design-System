@@ -3,7 +3,7 @@ import { clsx } from 'clsx'
 
 import { IText } from "./types";
 
-export function Text({ size = 'md', children, asChild }: IText) {
+export function Text({ size = 'md', children, asChild, className }: IText) {
 
   const Tag = asChild ? Slot : 'span'
 
@@ -15,7 +15,8 @@ export function Text({ size = 'md', children, asChild }: IText) {
           'text-xs': size === 'sm',
           'text-sm': size === 'md',
           'text-md': size === 'lg',
-        }
+        },
+        className
         )}>
         {children}
     </Tag>
